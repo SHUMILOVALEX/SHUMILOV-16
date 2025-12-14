@@ -53,3 +53,41 @@ int main() {
     }
     cout << sum << endl;
 }
+
+// Task 3
+#include <iostream>
+using namespace std;
+
+int razmen(int a) {
+    bool flag = true;
+    const int constanta = a;
+    cout << a << " = ";
+    while (flag) {
+        if (a >= 0) {
+            if (a - 5 > 0) {
+                cout << "5 + ";
+                a = a - 5;
+            } else if (a - 5 == 0) {
+                cout << "5 ";
+                a = a - 5;
+            } else if (a - 2 > 0) {
+                cout << "2 + ";
+                a = a - 2;
+            } else if (a - 2 == 0) {
+                cout << "2 ";
+                a = a - 2;
+            } else if (a - 1 > 0) {
+                cout << "1 + ";
+                a = a - 1;
+            } else if (a - 1 == 0) {
+                a = a - 1;
+                cout << "1 ";
+            }
+        } else { flag = false; }
+    }
+}
+
+int main() {
+    int a = 11;
+    razmen(a);
+}
