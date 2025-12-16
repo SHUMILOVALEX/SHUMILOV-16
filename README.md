@@ -86,6 +86,30 @@ int razmen(int a) {
         } else { flag = false; }
     }
 }
+//Task 5
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    vector<int> v = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+    int count = 0;
+    int sum = 0;
+    for (int i = 0; i < v.size(); i++) {
+        if (sum > count) {
+            count = sum;
+            sum = 0;
+        } else { sum = 0; }
+        for (int j = i; j < v.size(); j++) {
+            sum += v[j];
+            if (sum > count) {
+                count = sum;
+            }
+        }
+    }
+    cout << count << endl;
+}
+
 
 int main() {
     int a = 11;
