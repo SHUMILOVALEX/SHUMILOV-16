@@ -86,6 +86,28 @@ int razmen(int a) {
         } else { flag = false; }
     }
 }
+//Task 4 
+#include <iostream>
+#include <algorithm>
+
+long long uniquePaths(int m, int n) {
+    int totalSteps = m + n - 2;
+    int k = std::min(m - 1, n - 1);
+
+
+long long result = 1;
+    for (int i = 1; i <= k; ++i) {
+        result = result * (totalSteps - i + 1) / i;
+    }
+    return result;
+}
+
+int main() {
+    int m = 3, n = 7;
+    std::cout << uniquePaths(m, n);
+    return 0;
+}
+
 //Task 5
 #include <iostream>
 #include <vector>
